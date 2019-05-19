@@ -15,6 +15,7 @@ app.use(initializePassport)
 app.use(cors())
 
 const dbConn = 'mongodb://localhost/bookmarks'
+// const dbConn = process.env.MONGODB_DEPLOYED
 mongoose.connect(dbConn, (err) => {
   if (err) {
     console.log('Error connecting to database', err);
